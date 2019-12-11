@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Commitizen
+node_modules/
+package-lock.json
+package.json
+
+#MacOS
+.DS_Store
