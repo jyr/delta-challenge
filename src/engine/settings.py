@@ -41,6 +41,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS_BASE = [
     'rest_framework',
+    'dynamic_scraper'
 ]
 
 APIS = [

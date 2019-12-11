@@ -11,12 +11,13 @@
 
 BOT_NAME = 'news'
 
-SPIDER_MODULES = ['news.spiders']
+SPIDER_MODULES = ['news.spiders', 'dynamic_scraper.spiders']
 NEWSPIDER_MODULE = 'news.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'news (+http://www.yourdomain.com)'
+'%s/%s' % (BOT_NAME, '1.0')
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,9 +65,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'news.pipelines.NewsPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'dynamic_scraper.pipelines.ValidationPipeline': 400,
+    'news.scraper.pipelines.DjangoWriterPipeline': 800
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
