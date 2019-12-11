@@ -1,6 +1,6 @@
 from django.db import models
 
-# TODO: django-dynamic-scraper use python_2_unicode_compatible and djdango
+# TODO: django-dynamic-scraper use python_2_unicode_compatible and django
 #       Removed private Python 2 compatibility APIs
 #       https://github.com/holgerd77/django-dynamic-scraper/issues/138
 

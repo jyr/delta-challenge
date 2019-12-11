@@ -12,7 +12,7 @@ class NewsEndpointTest(APITestCase):
             'api_news:retrieve_news_by_keywords'
         )
 
-    def test_get_news(self):
+    def test_post_news(self):
         data = {
             "keywords": ["one", "two", "three"]
         }
