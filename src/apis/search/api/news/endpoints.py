@@ -8,13 +8,12 @@ from apis.search.api.news.serializers import NewsSerializer
 
 class NewsEndpoint(APIView):
 
-    def get(self, request):
+    def post(self, request):
         """
-        get:
+        post:
         Return news by keywords
         """
-
-        serializer =  NewsSerializer(data=request.query_params)
+        serializer =  NewsSerializer(data=request.data)
 
         if serializer.is_valid():
 
@@ -25,7 +24,7 @@ class NewsEndpoint(APIView):
                 )
             except:
                 raise Http404
-        
+
         return Response(
             {"error":serializer.errors},
             status=status.HTTP_400_BAD_REQUEST

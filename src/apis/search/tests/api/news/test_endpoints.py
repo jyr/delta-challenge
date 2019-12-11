@@ -17,6 +17,5 @@ class NewsEndpointTest(APITestCase):
             "keywords": ["one", "two", "three"]
         }
 
-        response = self.client.get(self.url, data, format='json')
-
+        response = self.client.post(self.url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
