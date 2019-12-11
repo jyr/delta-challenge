@@ -1,7 +1,8 @@
 from rest_framework import serializers
 
 class NewsSerializer(serializers.Serializer):
-    
+    keywords = serializers.ListField()
+
     def to_representation(self, data):
 
         return {
