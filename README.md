@@ -51,6 +51,12 @@ docker-compose exec api /bin/sh -c -l "./manage.py loaddata data/initial_to_dev.
 $ docker-compose exec api /bin/sh -c -l "./manage.py test apis"
 ```
 
+## Run crawler
+```
+$ docker-compose exec api /bin/sh -c -l "scrapy runspider scrappers/news/spiders/articles.py -o news.csv"
+```
+
+
 ## Docs
 
 * **delta API** - http://api.delta-dev.com:8000/docs/
