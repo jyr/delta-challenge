@@ -2,4 +2,4 @@ Django>=3.0
 psycopg2-binary>=2.7,<3.0
 djangorestframework==3.10.1
 django_dynamic_scraper==0.13.2
-Scrapy==1.8.0
+Scrapy==1.8.2
